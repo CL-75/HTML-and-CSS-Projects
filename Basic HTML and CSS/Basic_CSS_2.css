@@ -1,0 +1,9 @@
+p {
+	text-shadow: 2px 2px red;
+	font-style: inherit;
+	text-align: center;
+	color: black;
+	background-color: lightblue;
+	font-size: medium;
+}
+
