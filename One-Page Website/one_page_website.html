@@ -2,17 +2,18 @@
 <html>
    <head>
    	<meta charset="UTF-8">
-   	<title>SLOTHS</title>  	
+	   <title>SLOTHS</title>  	
+	   <link rel="stylesheet" href="./CSS/one_page_website.css">
    </head>
    <body>
      <!-- Nav Section -->
-     <div>
-     	<div>
-     		<nav>
+     <div class="wrap">
+     	<div class="menu-container">
+     		<ul class="menu">
      			<a href="#home" id="link"><li>HOME</li></a>
      			<a href="#gallery" id="link"><li>GALLERY</li></a>
      			<a href="#contact" id="link"><li>NEWSLETTER</li></a>
-     		</nav>
+			 </ul>
      	</div>
      </div>
 
@@ -20,33 +21,48 @@
     <div id="home">
     	<div>
     		<div>
-    			<h2><span>SLOTHS!</span></h2>
+    			<h1><span>SLOTHS!</span></h1>
     		</div>
     	</div>
     </div>
     <!-- End of Home -->
 
     <!-- Gallery  -->
-    <section>
-    	<div id="gallery">
-    		<h3>Gallery</h3>
-    		<div>
+    <section id="gallery">
+    	<div class="container">
+    		<h2><u>GALLERY AND VIDEO</u></h2>
+    		<div class="flex-container">
 
     			<!-- Photo Container 1 -->
-    				<div>
-    					<img src="./Thumb/sloth_1.png" alt="sloth smiling">
-    				</div>
+    				<div class="photo-container">
+						<div class="photo">
+						<img src="./Thumb/sloth_1.png" alt="sloth smiling">
+						<div class="photo-overlay">
+
+						</div>
+					</div>
+				</div>
     			<!-- End of Photo Container 1 -->
 
     			<!-- Photo Container 2 -->
-    			<div>
-    				<img src="./Thumb/sloth_2.png" alt="sloth close-up">
-    			</div>
+    			<div class="photo-container">
+					<div class="photo">
+					<img src="./Thumb/sloth_2.png" alt="sloth close-up">
+					<div class="photo-overlay">
+
+					</div>
+				</div>
+			</div>
     			<!-- End of Photo Container 2 -->
 
     			<!-- Photo Container 3 -->
-    			<div>
-    				<img src="./Thumb/sloth_3.png" alt="sloth tree">
+    			<div class="photo-container">
+					<div class="photo">
+					<img src="./Thumb/sloth_3.png" alt="sloth tree">
+					<div class="photo-overlay">
+
+					</div>
+					</div>
     			</div>
     			<!-- End of Photo Container 3 -->
 
@@ -56,28 +72,29 @@
     <!-- End of Gallery -->
 
     <section>       
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/DljStQsY80I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <center><iframe width="560" height="315" src="https://www.youtube.com/embed/DljStQsY80I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
     </section>
 
     <!-- RSVP -->
     <section>
     	<div id="contact">
     		<div>
-    			<h1>NEWSLETTER</h1>
+    			<h2><center><u>NEWSLETTER</u></center></h2>
     			<div>
-    				<p>
+    				<p><center>
     					Please provide us with your name and email to sign up for our monthly newsletter! 
-    				</p>
+    				</center></p>
     			</div>
-           <!-- Contact Info form -->
+		   <!-- Contact Info form -->
     		<form action="" method="post">
-    			<input class="rsvp" type="text" value="First Name">
-    			<input class="rsvp" type="text" value="Last Name">
-    			<input class="rsvp" type="text" value="Email Address">
+    			<input class="rsvp" type="text" placeholder="First Name">
+    			<input class="rsvp" type="text" placeholder="Last Name">
+    			<input class="rsvp" type="text" placeholder="Email Address">
     			<div class="form-spacer">
     			<div>
     				<input type="submit" value="Submit">
-    			</div>
+				</div>
+			</div>
     		</form>
            <!-- End of form -->
          </div>
