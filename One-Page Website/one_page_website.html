@@ -4,13 +4,14 @@
    	<meta charset="UTF-8">
 	   <title>SLOTHS</title>  	
 	   <link rel="stylesheet" href="./CSS/one_page_website.css">
-   </head>
+	   </head>
+
    <body>
      <!-- Nav Section -->
      <div class="wrap">
      	<div class="menu-container">
      		<ul class="menu">
-     			<a href="#home" id="link"><li>HOME</li></a>
+				<a href="#home" id="link" onclick="location.href='./one_page_website.html';"><li>HOME</li></a>
      			<a href="#gallery" id="link"><li>GALLERY</li></a>
      			<a href="#contact" id="link"><li>NEWSLETTER</li></a>
 			 </ul>
@@ -27,53 +28,69 @@
     </div>
     <!-- End of Home -->
 
-    <!-- Gallery  -->
-    <section id="gallery">
-    	<div class="container">
-    		<h2><u>GALLERY AND VIDEO</u></h2>
-    		<div class="flex-container">
-
-    			<!-- Photo Container 1 -->
-    				<div class="photo-container">
-						<div class="photo">
-						<img src="./Thumb/sloth_1.png" alt="sloth smiling">
-						<div class="photo-overlay">
-
-						</div>
-					</div>
-				</div>
-    			<!-- End of Photo Container 1 -->
-
-    			<!-- Photo Container 2 -->
-    			<div class="photo-container">
-					<div class="photo">
-					<img src="./Thumb/sloth_2.png" alt="sloth close-up">
-					<div class="photo-overlay">
-
-					</div>
-				</div>
-			</div>
-    			<!-- End of Photo Container 2 -->
-
-    			<!-- Photo Container 3 -->
-    			<div class="photo-container">
-					<div class="photo">
-					<img src="./Thumb/sloth_3.png" alt="sloth tree">
-					<div class="photo-overlay">
-
-					</div>
-					</div>
-    			</div>
-    			<!-- End of Photo Container 3 -->
-
-    		</div>
-    	</div>   	
-    </section>
-    <!-- End of Gallery -->
+	<!-- Images used to open the lightbox -->
+<div class="row">
+	<div class="column">
+	  <img src="./Thumb/sloth_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+	</div>
+	<div class="column">
+	  <img src="./Thumb/sloth_2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+	</div>
+	<div class="column">
+	  <img src="./Thumb/sloth_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+	</div>
+  </div>
+  
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+	<span class="close cursor" onclick="closeModal()">&times;</span>
+	<div class="modal-content">
+  
+	  <div class="mySlides">
+		<div class="numbertext">1 / 3</div>
+		<img src="./Thumb/sloth_1.jpg" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">2 / 3</div>
+		<img src="./Thumb/sloth_2.jpg" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">3 / 3</div>
+		<img src="./Thumb/sloth_3.jpg" style="width:100%">
+	  </div>
+  
+	  <!-- Next/previous controls -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+	  <!-- Caption text -->
+	  <div class="caption-container">
+		<p id="caption"></p>
+	  </div>
+  
+	  <!-- Thumbnail image controls -->
+	  <div class="column">
+		<img class="demo" src="./Thumb/sloth_1.jpg" onclick="currentSlide(1)" alt="Sloth Smiling">
+	  </div>
+  
+	  <div class="column">
+		<img class="demo" src="./Thumb/sloth_2.jpg" onclick="currentSlide(2)" alt="Sloth Close Up">
+	  </div>
+  
+	  <div class="column">
+		<img class="demo" src="./Thumb/sloth_3.jpg" onclick="currentSlide(3)" alt="Sloth Hanging Out">
+	  </div>
+  
+	</div>
+  </div>
+  
+   
 
     <section>       
      <center><iframe width="560" height="315" src="https://www.youtube.com/embed/DljStQsY80I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-    </section>
+    </section> 
 
     <!-- RSVP -->
     <section>
@@ -109,6 +126,7 @@
         <footer>
       	www.SLOTHS.arecool &nbsp;|&nbsp; &copy; 2020
       </footer>
-      </div>
+	  </div>
+	  <script src="./JS/one_page_website.js"></script>
    	</body>
 </html>
