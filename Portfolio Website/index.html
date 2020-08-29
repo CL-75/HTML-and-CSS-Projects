@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>My Portfolio - Casey Levy</title>
-		<link rel="stylesheet" type="text/css" href="Stylesheet/sample_Portfolio.css">
+		<link rel="stylesheet" type="text/css" href="./Stylesheet/portfolio.css">
 	</head>
 
 <!-- Body -->
@@ -14,9 +14,10 @@
 <!-- Navbar -->
 	<div class="Navbar">
 		<a class="active" href="#Home">Home</a> 
+		<a href="#Slideshow">Slideshow</a>       <!-- NEW -->
 		<a href="#About">About</a>
 		<a href="#GitHub">GitHub</a>
-		<a href="#Contact">Contact</a>
+		<a onclick="openForm()" ondblclick="closeForm()">Contact</a>   <!-- NEW -->
 	</div>
 
 <!-- Home -->
@@ -26,7 +27,7 @@
 <!-- Video -->
 	<div id="Home">
 		<video autoplay muted loop id="Typing_Video"> <!-- Makes the video play automatically, on a loop and with no sound -->
-			<source src="Stylesheet/Video/Typing.mp4" type="video/mp4">
+			<source src="./Stylesheet/Video/Typing.mp4" type="video/mp4">
 			Your browser does not support HTML5 video. <!-- Display message if video fails to run -->
 		</video>
 	</div>
@@ -50,15 +51,83 @@
 			</p> 
 	</div>
 
+	<!-- NEW- SLIDESHOW SECTION  -->
+	<div id="Slideshow">
+		<div id="Slideshow_Background"> 
+		  <div id="Slideshow_Container">
+			
+			<div class="mySlides fade">
+			  <div class="Slide_Number">1 / 6</div>
+				<img class="Slide_Show_Images" src="./Stylesheet/Images/Picture_of_You.jpg" style="width:100%">
+				  <div class="text">I'm available to assist you on your project!</div>
+			</div>
+			
+			<div class="mySlides fade">
+			  <div class="Slide_Number">2 / 6</div>
+				<img class="Slide_Show_Images" src="./Stylesheet/Images/HTML_CSS_and_JavaScript.jpeg" style="width:100%">
+				  <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+			</div>
+	
+			<div class="mySlides fade">
+			  <div class="Slide_Number">3 / 6</div>
+				<img class="Slide_Show_Images" src="./Stylesheet/Images/Python.png" style="width:100%">
+				  <div class="text">the popular programming language Python,</div>
+			</div>
+	
+			<div class="mySlides fade">
+			  <div class="Slide_Number">4 / 6</div>
+				<img class="Slide_Show_Images" src="./Stylesheet/Images/C_Sharp_and_Dot_NET.png" style="width:100%">
+				  <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+			</div>
+	
+			<div class="mySlides fade">
+			  <div class="Slide_Number">5 / 6</div>
+				<img class="Slide_Show_Images" src="./Stylesheet/Images/SQL_and_Database.jpg" style="width:100%">
+				  <div class="text">back end development, databases and SQL.</div>
+				</div>
+	
+			<div class="mySlides fade">
+			  <div class="Slide_Number">6 / 6</div>
+				<img class="Slide_Show_Images" src="./Stylesheet/Images/Coding_1.jpg" style="width:100%">
+				  <div class="text"> 
+					<a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+				  </div>
+			</div>
+		
+			  <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+			
+		  </div>
+	  <br>
+	
+		  <div style="text-align:center">
+	 
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span> 
+			<span class="dot" onclick="currentSlide(4)"></span> 
+			<span class="dot" onclick="currentSlide(5)"></span> 
+			<span class="dot" onclick="currentSlide(6)"></span> 
+	
+		  </div>
+		</div>
+	  </div>
+
 <!-- About section -->
 	<div class="Row" id="About"> 
 		<div class="Column_2"> <!-- Left column -->
-			<img src="Stylesheet/Images/Development.jpg" alt="Laptop">
+			<img src="./Stylesheet/Images/Development.jpg" alt="Laptop">
 		</div>
   
 		<div class="Column_1"> <!-- Right column -->
 			<h1>About</h2>
-				<p>I am a software developer who loves to code! As a father of three, I enjoy time with my family and traveling with and wherever our crazy lives take us. <br><br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Python Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C#, C++, Python, and more. <br><br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!</p>
+				<p>I am a software developer who loves to code! As a father of three, I enjoy time with my family 
+					and traveling with and wherever our crazy lives take us. 
+					<br><br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Python Boot Camp, and trained 
+					and experienced in the following web and programming languages: 
+					HTML, CSS, JavaScript, SQL, C#, C++, Python, and more. <br><br>
+					I am a full-stack developer and would love to work with you on your project.
+					 <a href="#Contact">Contact</a> me below!</p>
 		</div>
 	</div>
 
@@ -71,26 +140,33 @@
 		</div>
 		
 		<div class="Column_2"> <!-- Right column -->
-			<a href="https://github.com/CL-75" target="_blank"><img src="Stylesheet/Images/GitHub.png" alt="GitHub"></a>
+			<a href="https://github.com/CL-75" target="_blank"><img src="./Stylesheet/Images/GitHub.png" alt="GitHub"></a>
 		</div>
 	</div>
+</div>
 
 <!-- Contact section -->
-	<div class="Row" id="Contact"> 
-		<div class="Column_3"> <!-- Contact image, left column -->
-			<img src="Stylesheet/Images/Contact.jpg" alt="Contact_Image">
-		</div>
+	<div id="Contact"> 
+		<button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+			<div class="form-popup" id="myForm">
+		<!-- Below we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - 
+			note: it will not run unless live on the internet, you have to push it to your online website first -->
+				<form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> 
 	
-		<div class="Column_1"> <!-- Contact form, right "column" -->
-			<h1>Contact</h2> 
-				<form action="" method="get"> <!-- This specifies where to send the form data and how; it is left blank -->
-					<label><b>Name:</b></label>
-						<input type="text" placeholder="Please Enter Your Name Here">
-					<label><b>Email:</b></label>
-						<input type="text" id="Email" name="Email" placeholder="Please Enter Your Email Here">
-					<label><b>Message:</b></label>
-						<input type="text" id="Message" name="Message" placeholder="Please Write Your Message Here">
-						<input type="submit" value="Submit">
+		<div class="form-container"> <!-- Contact form -->
+
+			<h1>Contact</h1> 
+					<label for="name"><b>Name:</b></label>
+						<input type="text" placeholder="Please Enter Your Name Here" name="name" required>
+					<label for="email"><b>Email:</b></label>
+						<input type="text" id="Email" name="Email" placeholder="Please Enter Your Email Here" name="email" required>
+					<label for="phone"><b>Phone Number:</b></label>
+						<input type="text" placeholder="Please Enter Your Phone Number Here" name="phone">
+					<label for="message"><b>Message:</b></label>
+						<input type="text" placeholder="Please Type Your Message Here" name="message">
+
+						<button type="submit" class="btn">SUBMIT</button>
+						<button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
 				</form>
 		</div>
 	</div>
@@ -102,6 +178,7 @@
 		</p>
 	</footer>
 
+	<script src="./JS/portfolio.js"></script>
 		</body>
 
 </html>
